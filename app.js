@@ -4,13 +4,15 @@
     (input) => {
       input.timeout = null;
       var current = input.getElementsByClassName("current")[0];
+      input.history = parseInt(current.value);
       var clickHandler = function (operation) {
         return function (event) {
           current.value = parseInt(current.value) + operation;
           clearTimeout(input.timeout);
           input.timeout = setTimeout(() => {
             var newEntry = document.createElement("li");
-            newEntry.innerText = current.value;
+            newEntry.innerText = input.history;
+            input.history = parseInt(current.value);
             input.parentElement
               .getElementsByClassName("history")[0]
               .append(newEntry);
