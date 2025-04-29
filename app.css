@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "beleren";
+    src: url("Beleren-Bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    margin: 0;
+    font-family: "beleren", serif;
+    font-size: 16px;
+  }
+  .wrapper,
+  .players {
+    display: flex;
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .players {
+    flex-direction: row;
+    padding-bottom: 2rem;
+  }
+  .players,
+  .player {
+    flex: 1 1 100%;
+    height: calc(100vh - 1rem - 2rem - 4rem - 2rem);
+  }
+  .player:last-child {
+    border-left: 1px solid black;
+  }
+  .player:first-child {
+    border-right: 1px solid black;
+  }
+  .history {
+    flex: 0 0 0%;
+    overflow-y: scroll;
+    max-height: calc(100vh - 1rem - 2rem - 4rem - 2rem - (1rem * 4 * 2.5));
+  }
+  .history,
+  .input,
+  .topbar {
+    text-align: center;
+    font-size: 400%;
+  }
+  .topbar {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    line-height: 100%;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li:last-child {
+    padding-bottom: 1rem;
+  }
+  .input {
+    position: relative;
+  }
+  input {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 250%;
+    font-family: "beleren", "Eczar", serif;
+  }
+  button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    transition: background-color 0.25s ease;
+    touch-action: manipulation;
+  }
+  button:first-child {
+    top: 0;
+    bottom: 50%;
+  }
+  button:last-child {
+    top: 50%;
+    bottom: 0;
+  }
+  button:first-child:active {
+    background: green;
+  }
+  button:last-child:active {
+    background: red;
+  }
