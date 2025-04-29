@@ -11,6 +11,9 @@
           clearTimeout(input.timeout);
           input.timeout = setTimeout(() => {
             var newEntry = document.createElement("li");
+            if (input.history == parseInt(current.value)) {
+              return;
+            }
             newEntry.innerText = input.history;
             input.history = parseInt(current.value);
             input.parentElement

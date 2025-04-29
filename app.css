@@ -92,7 +92,9 @@
   }
   button:first-child:active {
     background: green;
+    opacity: 0.75;
   }
   button:last-child:active {
     background: red;
+    opacity: 0.75
   }
