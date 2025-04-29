@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+(function() {
   Array.prototype.forEach.call(
     document.getElementsByClassName("input"),
     (input) => {
@@ -27,4 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
       input.getElementsByClassName("down")[0].onclick = clickHandler(-1);
     },
   );
-});
+})();
