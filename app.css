@@ -98,3 +98,13 @@
     background: red;
     opacity: 0.75
   }
+
+  @media (prefers-color-scheme: dark) {
+    .player {
+      border-color: white;
+    }
+    body {
+      color: white;
+      background-color: black;
+    }
+  }
