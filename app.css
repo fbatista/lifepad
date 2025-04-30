@@ -101,7 +101,7 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    .player {
+    .player:first-child, .player:last-child {
       border-color: white;
     }
     body {
